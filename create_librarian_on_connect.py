@@ -38,7 +38,7 @@ privkey_path = os.path.join(new_librarian_dir, f"cle_privee.pem")
 with open(privkey_path, "wb") as f:
     f.write(privkey.save_pkcs1("PEM"))
 
-# Copie et envoi du script new file au librarizn
+# Copie du script new file dans le dossier librarizn de Genesis
 source_script = os.path.join(librarian_base, "new_file.py")
 dest_script = os.path.join(new_librarian_dir, "new_file.py")
 with open(source_script, "rb") as src, open(dest_script, "wb") as dst:
