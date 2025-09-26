@@ -1,4 +1,3 @@
-# create_librarian_on_connect.py
 import os
 import rsa
 import paramiko
@@ -6,11 +5,11 @@ from scp import SCPClient
 import sys
 
 # --- CONFIGURATION ---
-# IP du Librarian (sera incrémentée automatiquement)
+# IP du Librarien
 base_ip = "10.10.10."
 port = 9090
-ssh_user = "pi"            # utilisateur SSH du Librarian
-ssh_password = "changeme" # mot de passe SSH du Librarian
+ssh_user = "pi"            
+ssh_password = "changeme" 
 librarian_base = "librarien/"
 
 # Dossier pour stocker les Librarians (clé publique + new_file.py)
@@ -26,7 +25,7 @@ ip = sys.argv[1]
 new_librarian_dir = os.path.join(librarian_base, ip)
 os.makedirs(new_librarian_dir, exist_ok=True)
 
-# --- GÉNÉRATION DES CLÉS ---
+# Generation des clés
 pubkey, privkey = rsa.newkeys(2048)
 
 # Clé publique côté Librarian
