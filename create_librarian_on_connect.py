@@ -49,7 +49,7 @@ print(f"Dossier local : {new_librarian_dir}")
 print(f"Clé publique et new_file.py copiés localement")
 print(f"Clé privée sauvegardée côté Genesis : {privkey_path}")
 
-# --- ENVOI DU SCRIPT AU LIBRARIAN VIA SCP ---
+# Envoi des fu fichier new file + clé publique au librarien
 try:
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
